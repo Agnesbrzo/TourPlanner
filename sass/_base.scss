@@ -1,9 +1,38 @@
+:root {
+  --color-orange-light: rgba(252, 176, 69, 1);
+  --color-orange-darker: rgb(241, 118, 2);
+
+  --color-grey-light: rgb(243, 243, 243);
+  --color-grey-light-2: rgb(248, 246, 242);
+  --color-grey-darker-3: rgb(201, 201, 201);
+  --color-grey-darker-2: rgb(117, 117, 117);
+  --color-grey-darker: rgb(61, 61, 61);
+
+  --shadow-base: 0 10px 31px 6px rgba(0, 0, 0, 0.4);
+}
+
 * {
   margin: 0;
   padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 body {
   font-family: "Open Sans", sans-serif;
-  background-color: rgb(173, 128, 138);
+  font-weight: 400;
+  line-height: 1.4;
+  background-image: linear-gradient(
+    168deg,
+    var(--color-orange-light) 0%,
+    var(--color-orange-darker) 70%
+  );
+  min-height: 100vh;
+  background-repeat: no-repeat;
 }

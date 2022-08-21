@@ -12,9 +12,49 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>TourPlanner</title>
+    <title>TravelPlanner</title>
   </head>
   <body>
-    Trill
+    <div class="container">
+      <header class="header">
+        <div class="logo">TravelPlanner</div>
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search hotels"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use xlink:href="img/svg-file.svg#icon-magnifying-glass"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/svg-file.svg#icon-bookmark"></use>
+            </svg>
+            <span class="user-nav__notification">4</span>
+          </div>
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use xlink:href="img/svg-file.svg#icon-chat"></use>
+            </svg>
+            <span class="user-nav__notification">7</span>
+          </div>
+          <div class="user-nav__user">
+            <img class="user-nav__user-photo" alt="user photo" src="img/user-photo.jpg"></img>
+            
+            <span class="user-nav__user-name">Kathy</span>
+          </div>
+        </div>
+        
+      </header>
+      <div class="content">
+        <nav class="sidebar">navbar</nav>
+        <main class="hotel-description">hotel-description</main>
+      </div>
+    </div>
   </body>
 </html>
