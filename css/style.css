@@ -8,7 +8,8 @@
   --color-grey-darker-3: rgb(201, 201, 201);
   --color-grey-darker-2: rgb(117, 117, 117);
   --color-grey-darker: rgb(61, 61, 61);
-  --shadow-base: 0 10px 31px 6px rgba(0, 0, 0, 0.4); }
+  --shadow-base: 0 10px 31px 6px rgba(0, 0, 0, 0.4);
+  --shadow-subtle: 0 5px 2rem 2px rgba(0, 0, 0, 0.1); }
 
 * {
   margin: 0;
@@ -156,6 +157,110 @@ body {
     width: 100%;
     display: block; }
 
+.information-bar {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid var(--color-grey-light-2); }
+  .information-bar__header {
+    font-weight: 300;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    color: var(--color-grey-darker-2);
+    padding: 1.7rem 3rem; }
+  .information-bar__stars {
+    display: flex;
+    margin-right: auto; }
+  .information-bar__icon-star, .information-bar__icon-location {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: var(--color-orange-darker); }
+  .information-bar__icon-location {
+    margin-bottom: 2px; }
+  .information-bar__location {
+    display: flex;
+    align-items: center; }
+  .information-bar__button-orange {
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: var(--color-orange-darker);
+    border-bottom: 2px solid currentColor;
+    padding-bottom: 2px;
+    cursor: pointer;
+    margin-left: 0.4rem; }
+    .information-bar__button-orange:hover {
+      color: var(--color-grey-darker); }
+    .information-bar__button-orange:focus {
+      animation: pulse 1s infinite; }
+  .information-bar__rating {
+    margin-left: 3rem;
+    background-color: var(--color-orange-darker);
+    align-self: stretch;
+    padding: 0 1.5rem 0.2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .information-bar__rating--number {
+    font-size: 2.2rem;
+    font-weight: 300; }
+  .information-bar__rating--votes {
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 300; }
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.paragraph {
+  line-height: 2.2rem; }
+
+.list {
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-grey-darker-3);
+  border-bottom: 1px solid var(--color-grey-darker-3);
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; }
+  .list .list-item {
+    flex: 0 0 50%;
+    margin-bottom: 0.8rem; }
+    .list .list-item::before {
+      content: "";
+      display: inline-block;
+      height: 1.3rem;
+      width: 1.3rem;
+      margin-right: 1rem;
+      background-color: var(--color-orange-darker);
+      -webkit-mask-image: url(../img/SVG/chevron-thin-right.svg);
+      -webkit-mask-size: cover; }
+
+.photos-section {
+  display: flex;
+  align-items: center; }
+  .photos-section__paragraph {
+    font-size: 1.3rem;
+    color: var(--color-grey-darker);
+    margin-right: auto; }
+  .photos-section__photo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-left: -1.3rem;
+    border: 3px solid white;
+    box-sizing: content-box; }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.04); }
+  100% {
+    transform: scale(1); } }
+
 .container {
   max-width: 120rem;
   min-height: 50rem;
@@ -168,7 +273,8 @@ body {
     background-color: #fff;
     display: flex;
     justify-content: space-between;
-    align-items: center; }
+    align-items: center;
+    border-bottom: 2px solid var(--color-orange-light); }
   .container .content {
     display: flex; }
     .container .content .sidebar {
@@ -179,5 +285,21 @@ body {
       justify-content: space-between; }
     .container .content .hotel-description {
       flex-grow: 1;
-      background-color: white;
-      height: 90vh; }
+      background-color: white; }
+
+.details {
+  display: flex;
+  padding: 4rem;
+  background-color: var(--color-grey-light);
+  font-size: 1.4rem; }
+  .details__description-section {
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    background-color: #fff;
+    padding: 3rem;
+    box-shadow: var(--shadow-subtle); }
+  .details__guests-opinions {
+    flex: 1;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 5px 2rem 2px rgba(0, 0, 0, 0.1); }
